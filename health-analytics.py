@@ -1,3 +1,12 @@
+import numpy as np
+
+np.greetings("Ang")
+
+import pandas as pd
+
+pd.greetings("A")
+
+
 # Number variable
 number_variable = 3
 
@@ -20,3 +29,15 @@ my_dictionary = {
 
 }
 
+def evaluation_of_cancer_symptoms (age, symptoms):
+    symptoms = ["chronic cough", "feeling of weakness or tiredness", "coughing up blood", "chest pain"]
+    has_any_cancer_symptoms = any(symptoms)
+
+    if age <= 65:
+        print("low cancer risk")
+    elif has_any_cancer_symptoms:
+        print("High cancer risk patient:", symptoms)
+    else:
+        print("Moderate risk")
+
+evaluation_of_cancer_symptoms(55, "chronic cough")
